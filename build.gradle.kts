@@ -23,6 +23,9 @@ application {
 
 kotlin {
     jvmToolchain(24)
+    compilerOptions {
+        freeCompilerArgs.add("-opt-in=kotlin.time.ExperimentalTime")
+    }
 }
 dependencyManagement {
     imports {

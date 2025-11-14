@@ -11,7 +11,7 @@ fun Application.module() {
     configureSecurity()
     configureMonitoring()
     configureSerialization()
-    configureDatabases()
+    configureDatabases(environment.config)
     configureFrameworks()
     configureSockets()
     configureAdministration()

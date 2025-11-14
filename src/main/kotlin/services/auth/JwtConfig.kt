@@ -15,10 +15,10 @@ object JwtConfig {
     private lateinit var algorithm: Algorithm
 
     fun init(config: ApplicationConfig) {
-        privateKeyString = config.property("ktor.jwt.privateKey").getString()
-        issuer = config.property("ktor.jwt.issuer").getString()
-        audience = config.property("ktor.jwt.audience").getString()
-        myRealm = config.property("ktor.jwt.realm").getString()
+        privateKeyString = config.property("jwt.privateKey").getString()
+        issuer = config.property("jwt.issuer").getString()
+        audience = config.property("jwt.audience").getString()
+        myRealm = config.property("jwt.realm").getString()
 
         algorithm = Algorithm.HMAC256(privateKeyString)
     }
